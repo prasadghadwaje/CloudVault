@@ -1,0 +1,26 @@
+
+# Python virtual environment
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Secret encryption key
+keys/
+*.key
+
+# Uploaded, encrypted, and recovered files
+uploads/
+encrypted_blocks/
+downloads/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+
+# Local development files
+*.log
+.DS_Store

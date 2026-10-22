@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudVault | Secure Cloud Storage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <h2 class="logo">☁ CloudVault</h2>
+        <p class="menu-label">WORKSPACE</p>
+        <a href="#dashboard" class="nav-link active">▦ Dashboard</a>
+        <a href="#files" class="nav-link">▤ My Files</a>
+        <a href="#security" class="nav-link">♢ Security</a>
+        <div class="sidebar-bottom">
+            <span class="status-dot"></span> Secure storage workspace
+        </div>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">CLOUD STORAGE / WORKSPACE</p>
+                <h1>Welcome to CloudVault</h1>
+                <p class="subtitle">Your files, protected and accessible.</p>
+            </div>
+            <div class="avatar">CV</div>
+        </header>
+
+        <section class="hero">
+            <div>
+                <span class="pill">✦ SECURE CLOUD STORAGE</span>
+                <h2>Your files.<br>Under your control.</h2>
+                <p>Store, protect, and retrieve your files with encrypted
+                   blocks and cloud-based storage.</p>
+                <button class="primary-btn" id="choose-file-btn">
+                    + Upload a file
+                </button>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="cloud-icon">☁</div>
+                <div class="lock-icon">♢</div>
+                <span class="floating-chip">AES-256 ready</span>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span class="stat-icon">▤</span>
+                <p>Total files</p>
+                <h3 id="file-count">0</h3>
+                <small>Files in this session</small>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon">◈</span>
+                <p>Storage used</p>
+                <h3 id="storage-used">0 B</h3>
+                <small>Selected file records</small>
+            </article>
+            <article class="stat-card">
+                <span class="stat-icon">♢</span>
+                <p>Protection</p>
+                <h3>Encryption</h3>
+                <small>Backend integration pending</small>
+            </article>
+        </section>
+
+        <section class="files-section" id="files">
+            <div class="section-heading">
+                <div>
+                    <h2>My Files</h2>
+                    <p>Choose a file to prepare it for secure storage.</p>
+                </div>
+                <button class="secondary-btn" id="browse-btn">Browse files</button>
+            </div>
+
+            <input type="file" id="file-input" hidden>
+
+            <div class="upload-zone" id="upload-zone" tabindex="0" role="button"
+                 aria-label="Choose a file to upload">
+                <div class="upload-icon">↑</div>
+                <h3>Drop your file here</h3>
+                <p>or <span>browse your computer</span></p>
+                <small>Choose a file to begin. Cloud upload will be added next.</small>
+            </div>
+
+            <div id="selected-file" class="selected-file" hidden>
+                <div class="file-symbol">▤</div>
+                <div class="file-details">
+                    <strong id="selected-name"></strong>
+                    <small id="selected-size"></small>
+                </div>
+                <button class="remove-btn" id="remove-file" aria-label="Remove file">×</button>
+            </div>
+
+            <div class="security-note" id="security">
+                <span>♢</span>
+                <div>
+                    <strong>Security first</strong>
+                    <p>This initial version only selects files in your browser.
+                       No file is uploaded or encrypted yet.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            CloudVault · AWS mini project · Built for secure cloud storage
+        </footer>
+    </main>
+</body>
+</html>
